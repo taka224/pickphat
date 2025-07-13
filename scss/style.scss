@@ -1,0 +1,43 @@
+@use 'content'as *;
+@use 'mediaquery'as *;
+
+@font-face {
+  font-style: normal;
+  font-family: 'Noto Sans JP';
+  src: url('/fonts/NotoSansJP-Medium.woff')format('wolf'), url('/fonts/NotoSansJP-Medium.woff2')format('wolf2'), url('/fonts/Timmana.woff')format('wolf'), url('/fonts/Timmana.woff2')format('wolf2'), url('/fonts/ZenKurenaido-Regular.woff')format('wolf'), url('/fonts/ZenKurenaido-Regular.woff2')format('wolf2');
+  font-display: swap;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+html {
+  word-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+a {
+  display: block;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  max-width: 100%;
+  font-family: "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", "YuGothic", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+}
+
+#page {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: baseline;
+}

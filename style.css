@@ -1,0 +1,490 @@
+@charset "UTF-8";
+:root {
+  --red: #D90D1E;
+}
+
+header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100dvh;
+}
+@media (width <= 768px) {
+  header {
+    flex-direction: column;
+  }
+}
+header h1 {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: clamp(15.625rem, 9.509rem + 12.232vw, 24.188rem);
+}
+@media (width <= 768px) {
+  header h1 {
+    position: unset;
+    top: unset;
+    left: unset;
+    margin: 20px auto 20px auto;
+    height: 5dvh;
+  }
+}
+header h1 .fill {
+  fill: white;
+}
+@media (width <= 768px) {
+  header h1 .fill {
+    fill: black;
+    stroke: white;
+    stroke-width: 3px;
+  }
+}
+header #inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  background: black;
+}
+@media (width <= 768px) {
+  header #inner {
+    display: block;
+    width: 100%;
+    background: none;
+  }
+}
+header #inner ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+@media (width <= 768px) {
+  header #inner ul {
+    justify-content: flex-start;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    row-gap: 40px;
+    margin: 0;
+  }
+}
+header #inner ul li {
+  font-family: "Timmana";
+  font-size: clamp(2.5rem, 2.083rem + 0.868vw, 3.125rem);
+}
+header #inner ul li a {
+  position: relative;
+  color: white;
+}
+@media (width <= 768px) {
+  header #inner ul li a {
+    color: black;
+    text-align: center;
+  }
+}
+header #inner ul li a::before {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  content: "";
+  display: block;
+  background: var(--red);
+  width: 100%;
+  height: 3px;
+  transform: scale(0, 1);
+  transition: all 0.5s ease;
+}
+header #inner ul li a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+header #fv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  background-image: url(./img/fv.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (width <= 768px) {
+  header #fv {
+    display: block;
+    padding-top: 130px;
+    position: relative;
+    width: 100%;
+    height: 95dvh;
+    z-index: 1;
+  }
+}
+header #fv p {
+  font-family: "Zen Kurenaido";
+  font-size: clamp(1.875rem, 0.208rem + 3.472vw, 4.375rem);
+  text-align: right;
+  line-height: 1.5;
+  animation: fade 0.5s ease-in;
+}
+@media (width <= 768px) {
+  header #fv p {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 370px) {
+  header #fv p {
+    font-size: 25px;
+  }
+}
+@keyframes fade {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+    filter: blur(200px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+  @media (width <= 768px) {
+    0% {
+      transform: translateX(-100vw);
+    }
+  }
+}
+header #fv p span {
+  display: inline-block;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+}
+main .inner {
+  width: 98%;
+  margin: 0 auto;
+}
+@media (width <= 768px) {
+  main .inner {
+    padding: 0 20px;
+  }
+}
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  position: relative;
+}
+section h2 {
+  font-family: "Timmana";
+  font-size: clamp(3.75rem, 2.5rem + 2.604vw, 5.625rem);
+  color: var(--red);
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: calc(clamp(6.25rem, 5.833rem + 0.87vw, 6.875rem) * -1);
+  padding-top: 30px;
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  section h2 {
+    margin-top: -100px;
+  }
+}
+section#service {
+  padding-top: 30px;
+}
+section#service h2 {
+  padding-top: 0;
+  margin-top: 3rem;
+}
+section#service li h3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  border: solid black 1px;
+  height: 250px;
+}
+section#service li h3 span {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-size: clamp(1.25rem, 1.083rem + 0.347vw, 1.5rem);
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 50%;
+}
+section#service li:nth-of-type(1) h3 {
+  background-image: url(/img/service1.webp);
+}
+section#service li:nth-of-type(2) h3 {
+  background-image: url(/img/service2.webp);
+}
+section#service li:nth-of-type(3) h3 {
+  background-image: url(/img/service3.webp);
+}
+section#service li:nth-of-type(4) h3 {
+  background-image: url(/img/service4.webp);
+}
+section#service li:nth-of-type(5) h3 {
+  background-image: url(/img/service5.webp);
+}
+section#service li:nth-of-type(6) h3 {
+  background-image: url(/img/service6.webp);
+}
+section#service p {
+  line-height: 1.5;
+}
+section#service ul, section#works ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 0 60px;
+}
+@media (width <= 768px) {
+  section#service ul, section#works ul {
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 60px;
+    margin: 0 auto;
+  }
+}
+section#service li, section#works li {
+  width: clamp(18.75rem, 12.083rem + 13.889vw, 28.75rem);
+  max-width: 460px;
+}
+@media (width <= 768px) {
+  section#service li, section#works li {
+    width: 100%;
+  }
+}
+section#works, section#contact {
+  background-color: black;
+}
+section#works a div {
+  border-radius: 20px;
+  overflow: hidden;
+}
+section#works a img {
+  border: solid white 1px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+section#works a:hover img {
+  filter: grayscale(80%);
+  transform: scale(1.1);
+  transition: all 0.7s ease;
+}
+section#works figcaption {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+}
+section#biography #frame {
+  --profile: 10rem;
+  max-width: 500px;
+  background: #dedede;
+  padding: 2rem;
+  margin: 0 auto;
+}
+section#biography #frame figure {
+  text-align: center;
+  margin-bottom: 30px;
+}
+section#biography #frame figure img {
+  border-radius: 50%;
+  width: var(--profile);
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin-top: calc(var(--profile) / 2 * -1);
+}
+section#biography #frame figure figcaption {
+  color: black;
+  font-weight: bold;
+  font-size: 23px;
+}
+section#biography #frame p {
+  padding: 10px;
+  line-height: 2;
+}
+section#biography ul {
+  display: flex;
+  justify-content: end;
+  column-gap: 15px;
+  margin-top: 15px;
+}
+section#biography li {
+  width: 40px;
+}
+section#biography li img:hover {
+  opacity: 0.7;
+}
+section#contact form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+section#contact dl {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+section#contact dt {
+  color: white;
+  font-size: 20px;
+}
+section#contact dt span {
+  font-size: 17px;
+  margin-left: 15px;
+  color: var(--red);
+  background: white;
+  padding: 3px;
+  border-radius: 5px;
+}
+section#contact input,
+section#contact textarea {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  padding: 3px;
+}
+section#contact input {
+  height: 40px;
+}
+section#contact input[type=email]:focus {
+  font-size: 25px;
+  font-weight: bold;
+}
+section#contact input:user-invalid:not(:focus) {
+  background-color: #ffe8e9;
+}
+section#contact textarea {
+  height: 150px;
+}
+
+footer {
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+  background-color: white;
+  background-image: url(/img/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 60px 15px;
+  background-position: 80% center;
+  border: 2px white solid;
+  width: 500px;
+  height: 60px;
+  font-size: 35px;
+  border-radius: 8px;
+}
+.btn:hover {
+  background-color: black;
+  background-image: url(/img/arrow2.svg);
+  animation: arrow 0.5s ease-in forwards;
+  transition: all 0.5s ease-in;
+}
+.btn:hover:not(#_) {
+  color: white;
+}
+@keyframes arrow {
+  0% {
+    background-position: 80% center;
+  }
+  100% {
+    background-position: 90% center;
+  }
+}
+@media (width <= 768px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+#sub {
+  background-color: black;
+  color: white;
+}
+#sub header {
+  height: auto;
+  justify-content: center;
+}
+#sub header h1 {
+  position: relative;
+  left: 0;
+  top: 0;
+  padding-top: 30px;
+  margin: 30px 0;
+}
+#sub main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+#sub main a {
+  color: black;
+  margin-top: 80px;
+}
+
+@font-face {
+  font-style: normal;
+  font-family: "Noto Sans JP";
+  src: url("/fonts/NotoSansJP-Medium.woff") format("wolf"), url("/fonts/NotoSansJP-Medium.woff2") format("wolf2"), url("/fonts/Timmana.woff") format("wolf"), url("/fonts/Timmana.woff2") format("wolf2"), url("/fonts/ZenKurenaido-Regular.woff") format("wolf"), url("/fonts/ZenKurenaido-Regular.woff2") format("wolf2");
+  font-display: swap;
+}
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+html {
+  word-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+a {
+  display: block;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  max-width: 100%;
+  font-family: "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", "YuGothic", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+}
+
+#page {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: baseline;
+}
