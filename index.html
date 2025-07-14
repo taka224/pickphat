@@ -9,6 +9,12 @@
     <link rel="icon" href="/img/favicon.ico" id="favicon">
     <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/img/favicon.ico" sizes="any">
+    <script>
+        const css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = '/style.css?v=' + new Date().getTime(); // ← タイムスタンプで毎回URL変わる
+        document.head.appendChild(css);
+    </script>
     <meta name="description"
         content="PICKPHATは、「ユニバーサルデザインで、障害の壁を越える。」をスローガンに誰もが使いやすく、なおかつイケてるウェブサイトを目指しています。障害者ならでは視点でアクセシビリティに強いウェブサイトを制作いたします。">
     <meta property="og:locale" content="ja_JP">
@@ -20,12 +26,6 @@
     <meta property="og:url" content="https://pickphat.com/">
     <meta property="og:site_name" content="PICKPHAT / ピックファット| ユニバーサルデザインで、障害の壁を越える">
     <meta name="twitter:card" content="summary_large_image">
-<script>
-    const css = document.createElement('link');
-    css.rel = 'stylesheet';
-    css.href = '/style.css?v=' + new Date().getTime(); // バージョンは現在時刻
-    document.head.appendChild(css);
-</script>
 </head>
 
 <body>
