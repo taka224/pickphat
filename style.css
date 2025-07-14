@@ -89,7 +89,7 @@ header #inner ul li a {
 header #inner ul li a::before {
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 5px;
   content: "";
   display: block;
   background: var(--red);
