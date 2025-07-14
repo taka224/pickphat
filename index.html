@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PICKPHAT / ピックファット| ユニバーサルデザインで、障害の壁を越える</title>
     <link rel="stylesheet" href="destyle.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/img/favicon.ico" id="favicon">
     <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/img/favicon.ico" sizes="any">
@@ -21,6 +20,12 @@
     <meta property="og:url" content="https://pickphat.com/">
     <meta property="og:site_name" content="PICKPHAT / ピックファット| ユニバーサルデザインで、障害の壁を越える">
     <meta name="twitter:card" content="summary_large_image">
+<script>
+    const css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = '/style.css?v=' + new Date().getTime(); // バージョンは現在時刻
+    document.head.appendChild(css);
+</script>
 </head>
 
 <body>
