@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://incomparable-bunny-544154.netlify.app/*"
+  to = "https://pickphat.com/:splat"
+  status = 301
+  force = true
