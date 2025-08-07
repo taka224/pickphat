@@ -9,7 +9,7 @@ header {
   width: 100%;
   height: 100dvh;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   header {
     flex-direction: column;
   }
@@ -20,7 +20,7 @@ header h1 {
   left: 60px;
   width: clamp(15.625rem, 9.509rem + 12.232vw, 24.188rem);
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   header h1 {
     position: unset;
     top: unset;
@@ -32,7 +32,7 @@ header h1 {
 header h1 .fill {
   fill: white;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   header h1 .fill {
     fill: black;
     stroke: white;
@@ -46,7 +46,7 @@ header #inner {
   width: 50%;
   background: black;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   header #inner {
     display: block;
     width: 100%;
@@ -60,7 +60,7 @@ header #inner ul {
   margin-top: 60px;
   margin-left: 60px;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   header #inner ul {
     justify-content: flex-start;
     position: absolute;
@@ -80,7 +80,7 @@ header #inner ul li a {
   position: relative;
   color: white;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   header #inner ul li a {
     color: black;
     text-align: center;
@@ -111,7 +111,7 @@ header #fv {
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   header #fv {
     display: block;
     padding-top: 130px;
@@ -122,15 +122,32 @@ header #fv {
   }
 }
 header #fv p {
-  font-family: "Zen Kurenaido";
-  font-size: clamp(1.5rem, 0.15rem + 2.5vw, 3.5rem);
-  text-align: right;
-  line-height: 1.5;
+  display: flex;
+  justify-content: flex-end;
   animation: fade 0.5s ease-in;
 }
-@media (width <= 768px) {
+header #fv p strong {
+  display: inline-block;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background-color: black;
+  color: white;
+  font-family: "Zen Kurenaido";
+  font-size: clamp(2.3rem, 1.3rem + 1vw, 3.125rem);
+  font-feature-settings: "palt";
+  line-height: 1.5;
+  text-align: right;
+  padding: 5px;
+}
+@media (max-width: 1000px) {
   header #fv p {
-    text-align: center;
+    display: grid;
+    place-content: center;
+  }
+}
+@media (max-width: 1000px) {
+  header #fv p span {
+    display: block;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 370px) {
@@ -149,7 +166,7 @@ header #fv p {
     opacity: 1;
     filter: blur(0);
   }
-  @media (width <= 768px) {
+  @media (max-width: 768px) {
     0% {
       transform: translateX(-100vw);
     }
@@ -157,10 +174,6 @@ header #fv p {
 }
 header #fv p span {
   display: inline-block;
-  margin-bottom: 10px;
-  background-color: black;
-  color: white;
-  padding-left: 10px;
 }
 
 main {
@@ -172,7 +185,7 @@ main .inner {
   width: 98%;
   margin: 0 auto;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   main .inner {
     padding: 0 20px;
   }
@@ -215,7 +228,7 @@ section#service li h3 span {
   text-align: center;
   background: rgba(255, 255, 255, 0.8);
   font-weight: bold;
-  font-size: clamp(1.25rem, 1.083rem + 0.347vw, 1.5rem);
+  font-size: clamp(1.25rem, 0.15rem + 2.5vw, 3rem);
   width: 100%;
   display: block;
   position: relative;
@@ -249,7 +262,7 @@ section#service ul, section#works ul {
   gap: 60px;
   margin: 0 60px;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   section#service ul, section#works ul {
     justify-content: flex-start;
     align-items: center;
@@ -262,7 +275,7 @@ section#service li, section#works li {
   width: clamp(18.75rem, 12.083rem + 13.889vw, 28.75rem);
   max-width: 460px;
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   section#service li, section#works li {
     width: 100%;
   }
@@ -416,7 +429,7 @@ footer {
     background-position: 90% center;
   }
 }
-@media (width <= 768px) {
+@media (max-width: 768px) {
   .btn {
     width: 100%;
   }
