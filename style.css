@@ -203,7 +203,6 @@ section h2 {
   text-align: center;
   margin-bottom: 50px;
   margin-top: calc(clamp(6.25rem, 5.833rem + 0.87vw, 6.875rem) * -1);
-  padding-top: 30px;
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
   section h2 {
