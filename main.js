@@ -13,7 +13,6 @@
       document.body.style.overflow = "";
     } else {
       nav.hidden = !open;
-      document.body.style.overflow = open ? "hidden" : "";
     }
   }
 
