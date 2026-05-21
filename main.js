@@ -31,10 +31,33 @@
     });
   });
 
+  function navLinks() {
+    return Array.prototype.slice.call(nav.querySelectorAll("a"));
+  }
+
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true" && !mq.matches) {
-      setOpen(false);
-      btn.focus();
+    if (!mq.matches && btn.getAttribute("aria-expanded") === "true") {
+      if (e.key === "Escape") {
+        setOpen(false);
+        btn.focus();
+        return;
+      }
+      if (e.key === "Tab") {
+        var links = navLinks();
+        if (links.length === 0) return;
+        var last = links[links.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === btn) {
+            e.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault();
+            btn.focus();
+          }
+        }
+      }
     }
   });
 
