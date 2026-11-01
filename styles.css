@@ -279,7 +279,7 @@ header button[aria-controls="site-nav"][aria-expanded="true"] span[aria-hidden="
   }
 
   #site-nav a {
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
     font-weight: 700;
     letter-spacing: 0.14em;
     color: var(--color-ink);
@@ -352,11 +352,11 @@ header button[aria-controls="site-nav"][aria-expanded="true"] span[aria-hidden="
   #site-nav ul {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
   }
 
   #site-nav a {
-    font-size: 16px;
+    font-size: 1.1875rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     color: var(--color-ink-soft);
